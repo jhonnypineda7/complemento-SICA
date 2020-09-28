@@ -1,31 +1,39 @@
 var express = require('express');
-var excels = require('./validacion2.js');
-var body_parser = require('body-parser');
-var multer = require('multer')
+var excels = require('./validacion.js');
+var bodyParser = require('body-parser');
+var multer = require('multer');
+
 storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, './archivos') // Agregamos el directorio donde se guardarán los archivos.
+        cb(null, './archivos')
     },
     filename: function (req, file, cb) {
-        cb(null, file.originalname) // Le pasamos el nombre original del archvio, también podriamos cambiar el nombre concatenando la fecha actual.
+        cb(null, file.originalname)
     }
 }),
-    upload = multer({ storage }),
 
+    upload = multer({ storage }),
     app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }))
+
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/1.html');
+    res.sendFile(__dirname + '/validacion.html');
 })
 
-app.post('/subir', upload.single('archivo'), (req, res) => {
-    arc = req.file.originalname
-    excels.validar('Analisis', arc, `archivos/${arc}`)
-    res.send('Archivo subido correctamente: ' + req.file.originalname +
-        '<h1>' + `${excels.evaluacion}` + '<br>' + '<a href="http://localhost:3000/"><button>volver</button></a></h1>')
-})
+app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
+    fileName = req.file.originalname
+    modulo = req.body.modulo
+    excels.validar(modulo, fileName, `archivos/${fileName}`);
+    res.send(`<h1 style="text-align:center;margin-top:300px;font-family: Arial, Helvetica, sans-serif;"> 
+                El archivo:${fileName}<br>${excels.evaluacion} 
+                <a href="http://localhost:3000/"><br>
+                <button style="font-size:25px; border-radius: 10px;">INICIO</button></a>
+              </h1>`
+    )
+});
 
 app.listen(3000, () => {
-    console.log('El servidor esta corriendo');
-})
-
+    console.log('http://localhost:3000...');
+});
