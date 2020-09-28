@@ -9,20 +9,14 @@
 
 <body style="text-align: center; background-color: black;">
     <div class="container" style="background-color: deepskyblue; margin: 50px;">
-        <form style="margin: 40px;" action="/subir" method="post" enctype="multipart/form-data" onsubmit="">
-            <h1>Seleccione un modulo</h1>
-            <select>
-                <option>Analisis</option>
-                <option>Balance macromedicion</option>
-                <option>Hallazgos</option>
-                <option>Informativas</option>
-                <option>Liquidacion</option>
-                <option>Novedades</option>
-                <option>Storia</option>
-            </select>
+        <h1>Seleccione un modulo</h1>
+        <form action="/escoger_modulo" method="post">
+            <label for="modulo">Ingresar modulo</label>
+            <input type="text" name="modulo" id="modulo">
+            <input type="submit" value="Enviar" />
         </form>
         <br>
-        <form action="/subir" method="post" enctype="multipart/form-data" onsubmit="">
+        <form action="/validacion_de_archivos" method="post" enctype="multipart/form-data" onsubmit="">
             <h1>Ingrese un archivo</h1>
             <input type="file" name="archivo" />
             <button type="submit" onclick="">Enviar</button>
