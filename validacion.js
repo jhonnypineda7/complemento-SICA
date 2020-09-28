@@ -6,52 +6,51 @@ let nombreModulo, nombreActividad, archivo;
 // 
 exports.validar = (nombreModulo, nombreActividad, archivo) => {
 
-    let validado;
-    let confirmacion;
+    let validacionEncabezado;
     let encabezadosTodos = [];
-    const arreglo = headers.headers[nombreModulo][nombreActividad]
-    const result = excelToJson({
+    const encabezadosPredeterminados = headers.headers[nombreModulo][nombreActividad]
+    const archivoActual = excelToJson({
         sourceFile: archivo
     });
 
-    for (element in result) {
-        let valores = result[element]
-        encabezadosTodos.push(Object.values(valores[0]))
+    for (element in archivoActual) {
+        let celdas = archivoActual[element]
+        encabezadosTodos.push(Object.values(celdas[0]))
     };
-    console.log(encabezadosTodos.length + ":" + arreglo.length);
+    console.log(encabezadosTodos.length + ":" + encabezadosPredeterminados.length);
 
-    for (let i = 0; i < encabezadosTodos.length && arreglo.length; i++) {
+    for (let i = 0; i < encabezadosTodos.length && encabezadosPredeterminados.length; i++) {
 
-        let hoja1 = encabezadosTodos[i], hoja2 = arreglo[i];
-        if (hoja1.length === hoja2.length) {
-            for (let page = 0; page < hoja1.length; page++) {
-                for (let elementoAc = 0; elementoAc < hoja2.length; elementoAc++) {
-                    if (hoja1[page] !== hoja2[elementoAc]) {
-                        validado = false
-                        console.log(hoja1[page], "-----", hoja2[elementoAc], "  ", elementoAc);
+        let celdasActuales = encabezadosTodos[i], celdasPredetermindas = encabezadosPredeterminados[i];
+        if (celdasActuales.length === celdasPredetermindas.length) {
+            for (let j = 0; j < celdasActuales.length; j++) {
+                for (let k = 0; k < celdasPredetermindas.length; k++) {
+                    if (celdasActuales[j] !== celdasPredetermindas[k]) {
+                        validacionEncabezado = false
+                        console.log(celdasActuales[j], "-----", celdasPredetermindas[k], "  ", k);
 
                     } else {
-                        validado = true
-                        console.log(hoja1[page], "-----", hoja2[elementoAc]);
+                        validacionEncabezado = true
+                        console.log(celdasActuales[j], "-----", celdasPredetermindas[k]);
                         break
                     }
                 }
-                if (validado === false) {
+                if (validacionEncabezado === false) {
                     break
                 }
             }
         } else {
             console.log("lA CANTIDAD DE CELDAS NO ES CORRECTA")
-            validado = false
+            validacionEncabezado = false
             break
         }
     };
-    if (validado === true) {
-        console.log("validado")
-        exports.evaluacion = `es valido`
+    if (validacionEncabezado === true) {
+        console.log("validacionEncabezado")
+        exports.mensajeEvaluacion = `es valido`
     } else {
         console.log("no es valido")
-        exports.evaluacion = `no es valido:
+        exports.mensajeEvaluacion = `no es valido:
         las celdas no coinciden`
     };
 };
