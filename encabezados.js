@@ -1,7 +1,7 @@
 exports.headers = {
     Analisis: {
         "asignacion.xlsx": [
-            "NÚMERO_DE_",
+            ["NÚMERO_DE_",
             "CLASIFICACION_FINAL",
             "NRO_CUENTA",
             "SERVICIO_ELÉCTRICO",
@@ -84,11 +84,11 @@ exports.headers = {
             "IMAGEN",
             "ANEXO",
             "PESO",
-            "RECHAZO"
+            "RECHAZO"]
         ],
 
         "consolidado.xlsx": [
-            "NÚMERO_DE_",
+            ["NÚMERO_DE_",
             "ESTADO",
             "MOTIVO",
             "FECHA ANALISIS",
@@ -128,16 +128,16 @@ exports.headers = {
             "COBRO",
             "TIPO DE COBRO",
             "MOTIVO_RECHAZO",
-            "NOVCOM"
+            "NOVCOM"]
         ],
 
         "Gestion_terceros.xlsx": [
-            "Remitente",
+            ["Remitente",
             "ORDEN",
             "FechaSolicitud",
             "WORKERTAG",
             "ESTADO",
-            "MOTIVO",
+            "MOTIVO"]
         ],
 
         "Remitir__cargue_ODT.xlsx": [
@@ -148,9 +148,9 @@ exports.headers = {
                 "fecha"
             ],
             [
-                "26",
+                26,
                 "|",
-                "83",
+                83,
                 "|",
                 "|",
                 "|",
@@ -165,17 +165,18 @@ exports.headers = {
     },
     Balance_macromedicion: {
         "Asignacion.xlsx": [
-            "OT",
+            ["OT",
             "ID_COD_TRA",
             "FEC_MES",
             "PERDIDAS",
             "PER_MAC",
             "ASEGURADO",
-            "TIPO_MACROMEDICION"
+            "TIPO_MACROMEDICION"]
         ],
 
         "CONSOLIDADO BALANCE.xlsx": [
             [
+                "ESTADO",
                 "OT",
                 "ID_COD_TRA",
                 "FECHA_RECPECION",
@@ -370,7 +371,7 @@ exports.headers = {
                 "NUMERO_CUENTA",
                 "NUMERO_CNR",
                 "FECHA_LI",
-                " VALOR_CARGO_E774",
+                "VALOR_CARGO_E774",
                 "VALOR_CARGO_S782",
                 "VALOR_CARGO_I781",
                 "TARIFA",
@@ -441,7 +442,7 @@ exports.headers = {
                 "FORMATO_ACTA",
                 "FECHA_DE_OPERACIÓN_EN_TERRENO",
                 "SERVICIO_ELÉCTRICO",
-                "	FACTOR_INTERNO",
+                "FACTOR_INTERNO",
                 "NRO_COMPONENTE",
                 "COD_MARCA_COMPONENTE",
                 "DES_MARCA",
@@ -504,7 +505,7 @@ exports.headers = {
                 "NUMERO_CUENTA",
                 "NUMERO_CNR",
                 "FECHA_LI",
-                " VALOR_CARGO_E774",
+                "VALOR_CARGO_E774",
                 "VALOR_CARGO_S782",
                 "VALOR_CARGO_I781",
                 "TARIFA",
@@ -575,7 +576,7 @@ exports.headers = {
                 "FORMATO_ACTA",
                 "FECHA_DE_OPERACIÓN_EN_TERRENO",
                 "SERVICIO_ELÉCTRICO",
-                "	FACTOR_INTERNO",
+                "FACTOR_INTERNO",
                 "NRO_COMPONENTE",
                 "COD_MARCA_COMPONENTE",
                 "DES_MARCA",
@@ -638,7 +639,7 @@ exports.headers = {
                 "NUMERO_CUENTA",
                 "NUMERO_CNR",
                 "FECHA_LI",
-                " VALOR_CARGO_E774",
+                "VALOR_CARGO_E774",
                 "VALOR_CARGO_S782",
                 "VALOR_CARGO_I781",
                 "TARIFA",
@@ -709,7 +710,7 @@ exports.headers = {
                 "FORMATO_ACTA",
                 "FECHA_DE_OPERACIÓN_EN_TERRENO",
                 "SERVICIO_ELÉCTRICO",
-                "	FACTOR_INTERNO",
+                "FACTOR_INTERNO",
                 "NRO_COMPONENTE",
                 "COD_MARCA_COMPONENTE",
                 "DES_MARCA",
@@ -772,7 +773,7 @@ exports.headers = {
                 "NUMERO_CUENTA",
                 "NUMERO_CNR",
                 "FECHA_LI",
-                " VALOR_CARGO_E774",
+                "VALOR_CARGO_E774",
                 "VALOR_CARGO_S782",
                 "VALOR_CARGO_I781",
                 "TARIFA",
@@ -843,7 +844,7 @@ exports.headers = {
                 "FORMATO_ACTA",
                 "FECHA_DE_OPERACIÓN_EN_TERRENO",
                 "SERVICIO_ELÉCTRICO",
-                "	FACTOR_INTERNO",
+                "FACTOR_INTERNO",
                 "NRO_COMPONENTE",
                 "COD_MARCA_COMPONENTE",
                 "DES_MARCA",
@@ -906,7 +907,7 @@ exports.headers = {
                 "NUMERO_CUENTA",
                 "NUMERO_CNR",
                 "FECHA_LI",
-                " VALOR_CARGO_E774",
+                "VALOR_CARGO_E774",
                 "VALOR_CARGO_S782",
                 "VALOR_CARGO_I781",
                 "TARIFA",
@@ -977,7 +978,7 @@ exports.headers = {
                 "FORMATO_ACTA",
                 "FECHA_DE_OPERACIÓN_EN_TERRENO",
                 "SERVICIO_ELÉCTRICO",
-                "	FACTOR_INTERNO",
+                "FACTOR_INTERNO",
                 "NRO_COMPONENTE",
                 "COD_MARCA_COMPONENTE",
                 "DES_MARCA",
@@ -1230,7 +1231,7 @@ exports.headers = {
                 "sellos_S16",
                 "sellos_S17",
                 "sellos_S18",
-                "an2omalias_final_S0",
+                "anomalias_final_S0",
                 "anomalias_final_S1",
                 "anomalias_final_S2",
                 "anomalias_final_S3",
@@ -1364,7 +1365,7 @@ exports.headers = {
                 "sellos_S16",
                 "sellos_S17",
                 "sellos_S18",
-                "an2omalias_final_S0",
+                "anomalias_final_S0",
                 "anomalias_final_S1",
                 "anomalias_final_S2",
                 "anomalias_final_S3",
@@ -1498,7 +1499,7 @@ exports.headers = {
                 "sellos_S16",
                 "sellos_S17",
                 "sellos_S18",
-                "an2omalias_final_S0",
+                "anomalias_final_S0",
                 "anomalias_final_S1",
                 "anomalias_final_S2",
                 "anomalias_final_S3",
@@ -1632,7 +1633,7 @@ exports.headers = {
                 "sellos_S16",
                 "sellos_S17",
                 "sellos_S18",
-                "an2omalias_final_S0",
+                "anomalias_final_S0",
                 "anomalias_final_S1",
                 "anomalias_final_S2",
                 "anomalias_final_S3",
@@ -1766,7 +1767,7 @@ exports.headers = {
                 "sellos_S16",
                 "sellos_S17",
                 "sellos_S18",
-                "an2omalias_final_S0",
+                "anomalias_final_S0",
                 "anomalias_final_S1",
                 "anomalias_final_S2",
                 "anomalias_final_S3",
@@ -1828,6 +1829,7 @@ exports.headers = {
     },
     Liquidacion: {
         "Asignación.xlsx": [
+            [
             "NRO_ORDEN_2",
             "Workertag",
             "FECHA ASIGNA",
@@ -1850,8 +1852,9 @@ exports.headers = {
             "OBS_INSP",
             "SUCURSAL",
             "FUENTE_EPICA",
-            "estado_base_liquidacion"
-
+            "estado_base_liquidacion"],
+            [],
+            []
         ],
         "Gestion_Terceros.xlsx": [
             [
@@ -1896,7 +1899,7 @@ exports.headers = {
             ]
         ],
 
-        "REPORTES DE LIQUIDACION.xlsx": [
+        "REPORTES DE LIQUIDACION.xlsx": [[
             "EXPEDIENTE",
             "ESTADO",
             "MOTIVO",
@@ -1910,8 +1913,7 @@ exports.headers = {
             "HALLAZGOS_AGRUPADOS_last",
             "OBS_INSP",
             "FECHA ANALISIS",
-            "OBSERVACION",
-            "ANALISIS",
+            "OBSERVACION  ANALISIS",
             "WORKERTAG",
             "FECHA ASIGNA",
             "ASSIGNMENT",
@@ -1923,7 +1925,8 @@ exports.headers = {
             "ANOMALIA TERRENO",
             "ANOMALIA LAB",
             "Inicio periodo permanencia",
-            "PERMANENCIA	MÉTODO OBTENCIÓN DE CARGA",
+            "PERMANENCIA",	
+            "MÉTODO OBTENCIÓN DE CARGA",
             "kWh TOTALES",
             "$-Kwh-Recuperación",
             "$-kWh-Contribución",
@@ -1934,12 +1937,12 @@ exports.headers = {
             "MOTIVO TIPO M",
             "C/m",
             "FACTURA",
-            "F2"
+            "F2"]
         ]
     },
     Novedades: {
         "Asignación.xlsx": [
-            "Contratista",
+            ["Contratista",
             "Contrato",
             "Fecha y Hora de Creación de la Orden",
             "FECHA_DE_OPERACIÓN_EN_TERRENO",
@@ -2006,21 +2009,20 @@ exports.headers = {
             "OBSERVACIÓN",
             "MES",
             "INSTALADOS",
-            "asignación"
-
+            "asignación"]
         ],
 
-        "CONSOLIDADO BALANCE.xlsx": [
-            "OT",
+        "CONSOLIDADO BALANCE.csv": [
+            ["OT",
             "ID_COD_TRA",
             "FECHA_RECEPCION",
             "FECHA_SEGUIMIENTO",
             "ACCION",
-            "ESTADO"
+            "ESTADO"]
         ],
 
-        "Consolidado novedades.xlsx": [
-            "ORDEN",
+        "Consolidado novedades.xlsm": [
+            ["ORDEN",
             "ESTADO",
             "MOTIVO",
             "FECHA",
@@ -2049,24 +2051,24 @@ exports.headers = {
             "OBSERVACIÓN_NOVEDAD",
             "N_NOVEDAD",
             "ESTADO_DEL_COMPONENTE",
-            "UBICACIÓN_ACTUAL",
+            "UBICACIÓN_ACTUAL"]
 
 
         ],
         "Reporte novedades.xlsx": [
-            "Remitente",
+            ["Remitente",
             "ORDEN",
             "FechaSolicitud",
             "WORKERTAG",
             "ESTADO",
             "MOTIVO",
-            "OBSERVACIÓN_NOVEDAD"
+            "OBSERVACIÓN_NOVEDAD"]
 
         ]
     },
     Storia: {
-        "Asignación Storia.xlsx": [
-            "Tipo_Medida",
+        "Asignación Storia.XLSX": [
+            ["Tipo_Medida",
             "ID",
             "SERVICIO",
             "TIPO_ORDEN",
@@ -2117,11 +2119,11 @@ exports.headers = {
             "ACT_IMP",
             "ACT_EXP",
             "RCT_IMP",
-            "RCT_EXP"
+            "RCT_EXP"]
         ],
-        "Consolidado Storia.xlsx": [
-            "ESTADO",
-            "FECHA GESTION",
+        "Consolidado Storia.XLSX": [
+            ["ESTADO",
+            "FECHA GESTIÓN",
             "HOJA_VIDA",
             "NO_ORDEN",
             "NUM_CLI",
@@ -2150,7 +2152,7 @@ exports.headers = {
             "FCAL",
             "LAB",
             "Ip",
-            "RTU"
+            "RTU"]
         ]
     },
 };
