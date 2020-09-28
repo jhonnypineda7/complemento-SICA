@@ -1,9 +1,8 @@
 const excelToJson = require('convert-excel-to-json')
 const fs = require('fs')
 const headers = require('./encabezados')
-let nombreModulo, nombreActividad, archivo;
+// let nombreModulo, nombreActividad, archivo;
 
-// 
 exports.validar = (nombreModulo, nombreActividad, archivo) => {
 
     let validacionEncabezado;
@@ -27,7 +26,7 @@ exports.validar = (nombreModulo, nombreActividad, archivo) => {
                 for (let k = 0; k < celdasPredetermindas.length; k++) {
                     if (celdasActuales[j] !== celdasPredetermindas[k]) {
                         validacionEncabezado = false
-                        console.log(celdasActuales[j], "-----", celdasPredetermindas[k], "  ", k);
+                        // console.log(celdasActuales[j], "-----", celdasPredetermindas[k], "  ", k);
 
                     } else {
                         validacionEncabezado = true
@@ -46,7 +45,7 @@ exports.validar = (nombreModulo, nombreActividad, archivo) => {
         }
     };
     if (validacionEncabezado === true) {
-        console.log("validacionEncabezado")
+        console.log("Validado")
         exports.mensajeEvaluacion = `es valido`
     } else {
         console.log("no es valido")
@@ -54,3 +53,4 @@ exports.validar = (nombreModulo, nombreActividad, archivo) => {
         las celdas no coinciden`
     };
 };
+

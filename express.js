@@ -1,13 +1,15 @@
 var express = require('express');
-var excels = require('./validacion2.js');
+var excels = require('./validacion.js');
 var body_parser = require('body-parser');
 var multer = require('multer')
+app.use(body_parser.urlencoded({ extended: true }));
+
 storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './archivos') // Agregamos el directorio donde se guardarán los archivos.
     },
     filename: function (req, file, cb) {
-        cb(null, file.originalname) // Le pasamos el nombre original del archvio, también podriamos cambiar el nombre concatenando la fecha actual.
+        cb(null, file.originalname) // Le pasamos el nombre original del archvio
     }
 }),
     upload = multer({ storage }),
@@ -15,10 +17,10 @@ storage = multer.diskStorage({
     app = express();
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/1.html');
+    res.sendFile(__dirname + '/seleccionModulo.html');
 })
 
-app.post('/subir', upload.single('archivo'), (req, res) => {
+app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
     arc = req.file.originalname
     excels.validar('Analisis', arc, `archivos/${arc}`)
     res.send('Archivo subido correctamente: ' + req.file.originalname +
