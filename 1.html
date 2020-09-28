@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modulo</title>
+</head>
+
+<body style="text-align: center; background-color: black;">
+    <div class="container" style="background-color: deepskyblue; margin: 50px;">
+        <form style="margin: 40px;" action="/subir" method="post" enctype="multipart/form-data" onsubmit="">
+            <h1>Seleccione un modulo</h1>
+            <select>
+                <option>Analisis</option>
+                <option>Balance macromedicion</option>
+                <option>Hallazgos</option>
+                <option>Informativas</option>
+                <option>Liquidacion</option>
+                <option>Novedades</option>
+                <option>Storia</option>
+            </select>
+        </form>
+        <br>
+        <form action="/subir" method="post" enctype="multipart/form-data" onsubmit="">
+            <h1>Ingrese un archivo</h1>
+            <input type="file" name="archivo" />
+            <button type="submit" onclick="">Enviar</button>
+        </form>
+    </div>
+</body>
+<script src="/espress.js" src="/archivo.js"></script>
+
+</html>
