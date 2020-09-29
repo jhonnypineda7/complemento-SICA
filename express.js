@@ -2,6 +2,7 @@ var express = require('express');
 var excels = require('./validacion.js');
 var bodyParser = require('body-parser');
 var multer = require('multer');
+const fs = require('fs')
 
 storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -35,6 +36,13 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
                 <button style="font-size:25px; border-radius: 10px;">INICIO</button></a>
               </h1>`
     )
+
+    fs.unlink('./archivos/' + fileName, (err) => {
+        if (err) {
+            console.error(err)
+            return
+        }
+    })
 });
 
 app.use(function (err, req, res, next) {
@@ -42,6 +50,9 @@ app.use(function (err, req, res, next) {
     return res.status(500).send(`<h1 style="text-align:center;margin-top:300px;font-family: Arial, Helvetica, sans-serif;">El archivo no coincide con el modulo seleccionado<a href="http://localhost:3000/"><br><br>
     <button style="font-size:25px; border-radius: 10px;">INICIO</button></a></h1>`);
 });
+
+
+
 
 app.listen(3000, () => {
     console.log('http://localhost:3000...');

@@ -23,13 +23,13 @@ exports.validar = (nombreModulo, nombreActividad, archivo) => {
         let celdasActuales = encabezadosTodos[i], celdasPredeterminadas = encabezadosPredeterminados[i];
         if (celdasActuales.length === celdasPredeterminadas.length) {
             for (let j = 0; j < celdasActuales.length; j++) {
-                console.log(celdasActuales[j], "------", celdasPredeterminadas[j])
+                // console.log(celdasActuales[j], "------", celdasPredeterminadas[j])
                 for (let k = 0; k < celdasPredeterminadas.length; k++) {
                     if (celdasActuales[j] !== celdasPredeterminadas[k]) {
                         validacionEncabezados = false
                     } else {
                         validacionEncabezados = true
-                        console.log(celdasActuales[j], "-----", celdasPredeterminadas[k], "  ", k);
+                        console.log(celdasActuales[j], "-----", celdasPredeterminadas[k]);
                         break
                     }
                 }
