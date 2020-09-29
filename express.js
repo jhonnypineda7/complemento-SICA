@@ -23,6 +23,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
+    if (req.file.originalname === undefined) {
+        next(new Error('no coincide'));
+    }
     fileName = req.file.originalname
     modulo = req.body.modulo
     excels.validar(modulo, fileName, `archivos/${fileName}`);
@@ -32,6 +35,12 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
                 <button style="font-size:25px; border-radius: 10px;">INICIO</button></a>
               </h1>`
     )
+});
+
+app.use(function (err, req, res, next) {
+    console.log(err.stack);
+    return res.status(500).send(`<h1 style="text-align:center;margin-top:300px;font-family: Arial, Helvetica, sans-serif;">El archivo no coincide con el modulo seleccionado<a href="http://localhost:3000/"><br><br>
+    <button style="font-size:25px; border-radius: 10px;">INICIO</button></a></h1>`);
 });
 
 app.listen(3000, () => {
