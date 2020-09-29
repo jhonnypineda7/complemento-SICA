@@ -13,16 +13,16 @@
         <h1 style="background: darkslategrey;width:480px;">Seleccione el archivo </h1>
     </center>
     <form action="/validacion_de_archivos" method="post" enctype="multipart/form-data">
-        <select name="modulo" style="font-size: 20px">
-            <option> seleccione un modulo </option>
-            <option>Analisis</option>
-            <option>Balance macromedicion</option>
-            <option>Hallazgos</option>
-            <option>Informativas</option>
-            <option>Liquidacion</option>
-            <option>Novedades</option>
-            <option>Storia</option>
-        </select><br><br>
+        <select name="modulo" style="font-size: 20px" required>
+            <option value=""> seleccione un modulo </option>
+            <option value="Analisis">Analisis</option> 
+            <option value="Balance macromedicion">Balance macromedicion</option> 
+            <option value="Hallazgos">Hallazgos</option>
+            <option value="Informativas">Informativas</option> 
+            <option value="Liquidacion">Liquidacion</option> 
+            <option value="Novedades">Novedades</option>
+            <option value="Storia">Storia</option>
+         </select><br><br
         <input style="font-size: 18px;background-color: rgba(33, 158, 137, 0.753); width:380px;" type="file"
             name="archivo" required="required" />
         <button type="submit" style="font-size: 20px;">ENVIAR</button>
