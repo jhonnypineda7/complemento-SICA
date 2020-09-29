@@ -88,7 +88,6 @@ exports.headers = {
                 "RECHAZO"
             ]
         ],
-
         "consolidado.xlsx": [
             [
                 "NÚMERO_DE_",
@@ -134,7 +133,6 @@ exports.headers = {
                 "NOVCOM"
             ]
         ],
-
         "Gestion_terceros.xlsx": [
             [
                 "Remitente",
@@ -145,7 +143,6 @@ exports.headers = {
                 "MOTIVO"
             ]
         ],
-
         "Remitir__cargue_ODT.xlsx": [
             [
                 "orden",
@@ -169,6 +166,7 @@ exports.headers = {
             ]
         ]
     },
+
     "Balance macromedicion": {
         "Asignacion.xlsx": [
             [
@@ -181,7 +179,6 @@ exports.headers = {
                 "TIPO_MACROMEDICION"
             ]
         ],
-
         "CONSOLIDADO BALANCE.xlsx": [
             [
                 "ESTADO",
@@ -209,6 +206,7 @@ exports.headers = {
             ]
         ]
     },
+
     Hallazgos: {
         "Asignación.xlsx": [
             [
@@ -1020,8 +1018,8 @@ exports.headers = {
                 "MES_DE_QUIEBRE"
             ]
         ],
-
     },
+
     Informativas: {
         "Asignación.xlsx": [
             [
@@ -1832,9 +1830,9 @@ exports.headers = {
                 "WORKETAG",
                 "MES_DE_QUIEBRE"
             ]
-
         ]
     },
+
     Liquidacion: {
         "Asignación.xlsx": [
             [
@@ -1860,7 +1858,8 @@ exports.headers = {
                 "OBS_INSP",
                 "SUCURSAL",
                 "FUENTE_EPICA",
-                "estado_base_liquidacion"],
+                "estado_base_liquidacion"
+            ],
             [
                 "Cuenta de NRO_ORDEN_2",
                 "Etiquetas de columna"
@@ -1918,7 +1917,6 @@ exports.headers = {
 
             ]
         ],
-
         "REPORTES DE LIQUIDACION.xlsx": [
             [
                 "EXPEDIENTE",
@@ -1962,6 +1960,7 @@ exports.headers = {
             ]
         ]
     },
+
     Novedades: {
         "Asignación.xlsx": [
             [
@@ -2035,7 +2034,6 @@ exports.headers = {
                 "asignación"
             ]
         ],
-
         "CONSOLIDADO BALANCE.csv": [
             [
                 "OT",
@@ -2046,7 +2044,6 @@ exports.headers = {
                 "ESTADO"
             ]
         ],
-
         "Consolidado novedades.xlsm": [
             [
                 "ORDEN",
@@ -2156,9 +2153,9 @@ exports.headers = {
                 "MOTIVO",
                 "OBSERVACIÓN_NOVEDAD"
             ]
-
         ]
     },
+
     Storia: {
         "Asignación Storia.XLSX": [
             [

@@ -3,7 +3,6 @@ const fs = require('fs')
 const headers = require('./encabezados')
 let nombreModulo, nombreActividad, archivo;
 
-// 
 exports.validar = (nombreModulo, nombreActividad, archivo) => {
 
     let validacionEncabezados;
@@ -45,7 +44,7 @@ exports.validar = (nombreModulo, nombreActividad, archivo) => {
         }
     };
     if (validacionEncabezados === true) {
-        console.log("   validacionEncabezados")
+        console.log("validado")
         exports.mensajeEvaluacion = `es valido`
     } else {
         console.log("no es valido")

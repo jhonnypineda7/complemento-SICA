@@ -8,23 +8,27 @@
 </head>
 
 <body style="text-align: center; margin-top: 250px;font-family: Arial, Helvetica, sans-serif;font-size: 20px; ">
-    <center><h1 style="background: darkslategrey;width:480px;">Seleccione el archivo </h1></center>
-    <form action="/validacion_de_archivos" method="post" enctype="multipart/form-data" >
-    <select name="modulo" style="font-size: 20px">
-        <option> seleccione un modulo </option>
-            <option >Analisis</option> 
-            <option >Balance macromedicion</option> 
-            <option >Hallazgos</option>
-            <option >Informativas</option> 
-            <option >Liquidacion</option> 
-            <option >Novedades</option>
-            <option >Storia</option>
-         </select><br><br>
-        <input style="font-size: 18px;background-color: rgba(33, 158, 137, 0.753); width:380px;" type="file" name="archivo"/>
+    </script>
+    <center>
+        <h1 style="background: darkslategrey;width:480px;">Seleccione el archivo </h1>
+    </center>
+    <form action="/validacion_de_archivos" method="post" enctype="multipart/form-data">
+        <select name="modulo" style="font-size: 20px">
+            <option> seleccione un modulo </option>
+            <option>Analisis</option>
+            <option>Balance macromedicion</option>
+            <option>Hallazgos</option>
+            <option>Informativas</option>
+            <option>Liquidacion</option>
+            <option>Novedades</option>
+            <option>Storia</option>
+        </select><br><br>
+        <input style="font-size: 18px;background-color: rgba(33, 158, 137, 0.753); width:380px;" type="file"
+            name="archivo" required="required" />
         <button type="submit" style="font-size: 20px;">ENVIAR</button>
     </form>
-    
-    
+
 </body>
+<script src="validacion.js"></script>
 
 </html>
