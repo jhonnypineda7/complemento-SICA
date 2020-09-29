@@ -1,7 +1,8 @@
 exports.headers = {
     Analisis: {
         "asignacion.xlsx": [
-            ["NÚMERO_DE_",
+            [
+                "NÚMERO_DE_",
                 "CLASIFICACION_FINAL",
                 "NRO_CUENTA",
                 "SERVICIO_ELÉCTRICO",
@@ -84,11 +85,13 @@ exports.headers = {
                 "IMAGEN",
                 "ANEXO",
                 "PESO",
-                "RECHAZO"]
+                "RECHAZO"
+            ]
         ],
 
         "consolidado.xlsx": [
-            ["NÚMERO_DE_",
+            [
+                "NÚMERO_DE_",
                 "ESTADO",
                 "MOTIVO",
                 "FECHA ANALISIS",
@@ -128,16 +131,19 @@ exports.headers = {
                 "COBRO",
                 "TIPO DE COBRO",
                 "MOTIVO_RECHAZO",
-                "NOVCOM"]
+                "NOVCOM"
+            ]
         ],
 
         "Gestion_terceros.xlsx": [
-            ["Remitente",
+            [
+                "Remitente",
                 "ORDEN",
                 "FechaSolicitud",
                 "WORKERTAG",
                 "ESTADO",
-                "MOTIVO"]
+                "MOTIVO"
+            ]
         ],
 
         "Remitir__cargue_ODT.xlsx": [
@@ -165,13 +171,15 @@ exports.headers = {
     },
     "Balance macromedicion": {
         "Asignacion.xlsx": [
-            ["OT",
+            [
+                "OT",
                 "ID_COD_TRA",
                 "FEC_MES",
                 "PERDIDAS",
                 "PER_MAC",
                 "ASEGURADO",
-                "TIPO_MACROMEDICION"]
+                "TIPO_MACROMEDICION"
+            ]
         ],
 
         "CONSOLIDADO BALANCE.xlsx": [
@@ -1911,50 +1919,53 @@ exports.headers = {
             ]
         ],
 
-        "REPORTES DE LIQUIDACION.xlsx": [[
-            "EXPEDIENTE",
-            "ESTADO",
-            "MOTIVO",
-            "NÚMERO_DE_",
-            "NRO_CUENTA",
-            "SERVICIO_ELÉCTRICO",
-            "DES_RESULTADO",
-            "FECHA_DE_OPERACIÓN_EN_TERRENO",
-            "contrato",
-            "GRUPO",
-            "HALLAZGOS_AGRUPADOS_last",
-            "OBS_INSP",
-            "FECHA ANALISIS",
-            "OBSERVACION  ANALISIS",
-            "WORKERTAG",
-            "FECHA ASIGNA",
-            "ASSIGNMENT",
-            "FACTOR_ENCONTRADO",
-            "FECHA DE CARGUE EPICA",
-            "Obs_liquidación",
-            "NOVCOM",
-            "DOLO",
-            "ANOMALIA TERRENO",
-            "ANOMALIA LAB",
-            "Inicio periodo permanencia",
-            "PERMANENCIA",
-            "MÉTODO OBTENCIÓN DE CARGA",
-            "kWh TOTALES",
-            "$-Kwh-Recuperación",
-            "$-kWh-Contribución",
-            "RECUPERACIÓN DE ENERGÍA",
-            "CONTRIBUCION POR REINTEGROS",
-            "SUBSIDIO",
-            "$CNR",
-            "MOTIVO TIPO M",
-            "C/m",
-            "FACTURA",
-            "F2"]
+        "REPORTES DE LIQUIDACION.xlsx": [
+            [
+                "EXPEDIENTE",
+                "ESTADO",
+                "MOTIVO",
+                "NÚMERO_DE_",
+                "NRO_CUENTA",
+                "SERVICIO_ELÉCTRICO",
+                "DES_RESULTADO",
+                "FECHA_DE_OPERACIÓN_EN_TERRENO",
+                "contrato",
+                "GRUPO",
+                "HALLAZGOS_AGRUPADOS_last",
+                "OBS_INSP",
+                "FECHA ANALISIS",
+                "OBSERVACION  ANALISIS",
+                "WORKERTAG",
+                "FECHA ASIGNA",
+                "ASSIGNMENT",
+                "FACTOR_ENCONTRADO",
+                "FECHA DE CARGUE EPICA",
+                "Obs_liquidación",
+                "NOVCOM",
+                "DOLO",
+                "ANOMALIA TERRENO",
+                "ANOMALIA LAB",
+                "Inicio periodo permanencia",
+                "PERMANENCIA",
+                "MÉTODO OBTENCIÓN DE CARGA",
+                "kWh TOTALES",
+                "$-Kwh-Recuperación",
+                "$-kWh-Contribución",
+                "RECUPERACIÓN DE ENERGÍA",
+                "CONTRIBUCION POR REINTEGROS",
+                "SUBSIDIO",
+                "$CNR",
+                "MOTIVO TIPO M",
+                "C/m",
+                "FACTURA",
+                "F2"
+            ]
         ]
     },
     Novedades: {
         "Asignación.xlsx": [
-            ["Contratista",
+            [
+                "Contratista",
                 "Contrato",
                 "Fecha y Hora de Creación de la Orden",
                 "FECHA_DE_OPERACIÓN_EN_TERRENO",
@@ -2021,16 +2032,19 @@ exports.headers = {
                 "OBSERVACIÓN",
                 "MES",
                 "INSTALADOS",
-                "asignación"]
+                "asignación"
+            ]
         ],
 
         "CONSOLIDADO BALANCE.csv": [
-            ["OT",
+            [
+                "OT",
                 "ID_COD_TRA",
                 "FECHA_RECEPCION",
                 "FECHA_SEGUIMIENTO",
                 "ACCION",
-                "ESTADO"]
+                "ESTADO"
+            ]
         ],
 
         "Consolidado novedades.xlsm": [
@@ -2133,19 +2147,22 @@ exports.headers = {
             ]
         ],
         "Reporte novedades.xlsx": [
-            ["Remitente",
+            [
+                "Remitente",
                 "ORDEN",
                 "FechaSolicitud",
                 "WORKERTAG",
                 "ESTADO",
                 "MOTIVO",
-                "OBSERVACIÓN_NOVEDAD"]
+                "OBSERVACIÓN_NOVEDAD"
+            ]
 
         ]
     },
     Storia: {
         "Asignación Storia.XLSX": [
-            ["Tipo_Medida",
+            [
+                "Tipo_Medida",
                 "ID",
                 "SERVICIO",
                 "TIPO_ORDEN",
@@ -2196,10 +2213,12 @@ exports.headers = {
                 "ACT_IMP",
                 "ACT_EXP",
                 "RCT_IMP",
-                "RCT_EXP"]
+                "RCT_EXP"
+            ]
         ],
         "Consolidado Storia.XLSX": [
-            ["ESTADO",
+            [
+                "ESTADO",
                 "FECHA GESTIÓN",
                 "HOJA_VIDA",
                 "NO_ORDEN",
@@ -2229,7 +2248,8 @@ exports.headers = {
                 "FCAL",
                 "LAB",
                 "Ip",
-                "RTU"]
+                "RTU"
+            ]
         ]
     },
 };
