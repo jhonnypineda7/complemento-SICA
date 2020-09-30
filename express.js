@@ -36,7 +36,7 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
                 <button style="font-size:25px; border-radius: 10px;">INICIO</button></a>
               </h1>`
     )
-    
+
     fs.unlink('./archivos/' + fileName, (err) => {
         if (err) {
             console.error(err)
