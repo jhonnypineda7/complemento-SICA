@@ -2157,7 +2157,7 @@ exports.headers = {
     },
 
     Storia: {
-        "Asignación Storia.XLSX": [
+        "Asignación Storia.xlsx": [
             [
                 "Tipo_Medida",
                 "ID",
@@ -2213,7 +2213,7 @@ exports.headers = {
                 "RCT_EXP"
             ]
         ],
-        "Consolidado Storia.XLSX": [
+        "Consolidado Storia.xlsx": [
             [
                 "ESTADO",
                 "FECHA GESTIÓN",
