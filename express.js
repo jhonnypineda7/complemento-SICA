@@ -47,6 +47,12 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
 
 app.use(function (err, req, res, next) {
     console.log(err.stack);
+    fs.unlink('./archivos/' + fileName, (err) => {
+        if (err) {
+            console.error(err)
+            return
+        }
+    })
     return res.status(500).send(`<h1 style="text-align:center;margin-top:300px;font-family: Arial, Helvetica, sans-serif;">El archivo no coincide con el modulo seleccionado<a href="http://localhost:3000/"><br><br>
     <button style="font-size:25px; border-radius: 10px;">INICIO</button></a></h1>`);
 });
