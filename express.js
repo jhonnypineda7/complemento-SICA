@@ -3,6 +3,8 @@ var excels = require('./validacion.js');
 var bodyParser = require('body-parser');
 var multer = require('multer');
 const fs = require('fs')
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb+srv://jhonny95:369852147@1-1.xxloa.mongodb.net/Archivosdb?retryWrites=true&w=majority";
 
 storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -35,8 +37,18 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
                 <a href="http://localhost:3000/"><br>
                 <button style="font-size:25px; border-radius: 10px;">INICIO</button></a>
               </h1>`
-    )
 
+    )
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        var dbo = db.db("Archivosdb");
+        var myobj = { modulo: `${modulo}`, name: `${fileName}`, totalEncabezados: `${excels.celdasTotales}` };
+        dbo.collection("archivos").insertOne(myobj, function (err, res) {
+            if (err) throw err;
+            console.log("1 document inserted");
+            db.close();
+        });
+    })
     fs.unlink('./archivos/' + fileName, (err) => {
         if (err) {
             console.error(err)

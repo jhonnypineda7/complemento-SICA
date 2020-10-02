@@ -20,6 +20,7 @@
     "fs-js": "^1.0.6",
     "http": "0.0.1-security",
     "http-server": "^0.12.3",
+    "mongodb": "^3.6.2",
     "multer": "^1.4.2",
     "sheets": "^0.6.0",
     "xlsx": "^0.16.6",
