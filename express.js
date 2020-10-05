@@ -45,7 +45,7 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
         var myobj = { modulo: `${modulo}`, name: `${fileName}`, totalEncabezados: `${excels.celdasTotales}` };
         dbo.collection("archivos").insertOne(myobj, function (err, res) {
             if (err) throw err;
-            console.log("1 document inserted");
+            console.log("1 documento insertado");
             db.close();
         });
     })
