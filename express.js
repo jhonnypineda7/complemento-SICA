@@ -69,9 +69,5 @@ app.use(function (err, req, res, next) {
     <button style="font-size:25px; border-radius: 10px;">INICIO</button></a></h1>`);
 });
 
-
-
-
-app.listen(3000, () => {
-    console.log('http://localhost:3000...');
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT);
