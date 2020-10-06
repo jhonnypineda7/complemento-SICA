@@ -4,29 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
 <body style="text-align: center; margin-top: 250px;border-radius:20px;font-size:20px;">
-    <center>
-        <h1 style="background: darkslategrey;width:480px;color: gainsboro;">Seleccione el archivo </h1>
-    </center>
-    <form action="/validacion_de_archivos" method="post" enctype="multipart/form-data">
-        <select name="modulo" style="font-size: 20px" required>
-            <option value="" selected style="display:none"> seleccione un modulo </option>
-            <option value="Analisis">Analisis</option>
-            <option value="Balance macromedicion">Balance macromedicion</option>
-            <option value="Hallazgos">Hallazgos</option>
-            <option value="Informativas">Informativas</option>
-            <option value="Liquidacion">Liquidacion</option>
-            <option value="Novedades">Novedades</option>
-            <option value="Storia">Storia</option>
-        </select><br><br>
-        <input style="font-size: 18px;background-color: rgba(33, 158, 137, 0.753); width:380px; border-radius: 20px;" ,
-            type="file" name="archivo" required="required" />
-        <button type="submit" style="font-size: 20px; border-radius: 20px;">ENVIAR</button>
-    </form>
+    <a href="" style="margin-bottom: 40px;"><img
+            src="https://media-exp1.licdn.com/dms/image/C4E0BAQEOX5j6Fs2j_Q/company-logo_200_200/0?e=2159024400&v=beta&t=Igi77YJ0MYgA72km0KZ6hCY1MpPPxodLQRSTkoBRVT8"
+            alt="">
+    </a>
+    <div class="container" style="background-color: rgb(0, 122, 122); color: white; border-radius: 15px;">
+        <h1>Seleccione el archivo </h1>
+    </div>
+    <div class="container" style="background-color: rgb(0, 122, 122); color: white; border-radius: 15px;">
 
+        <form action="/validacion_de_archivos" method="post" enctype="multipart/form-data">
+            <select name="modulo" style="font-size: 20px; margin-top: 25px;" required>
+                <option value="" selected style="display:none"> seleccione un modulo </option>
+                <option value="Analisis">Analisis</option>
+                <option value="Balance macromedicion">Balance macromedicion</option>
+                <option value="Hallazgos">Hallazgos</option>
+                <option value="Informativas">Informativas</option>
+                <option value="Liquidacion">Liquidacion</option>
+                <option value="Novedades">Novedades</option>
+                <option value="Storia">Storia</option>
+            </select><br><br>
+            <input style="font-size: 18px; width:380px; margin: 20px; background-color: white; color: black;" ,
+                type="file" name="archivo" required="required" />
+            <br>
+            <button type="submit" style="font-size: 20px; border-radius: 20px; margin: 20px;">ENVIAR</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 <script src="validacion.js"></script>
 
