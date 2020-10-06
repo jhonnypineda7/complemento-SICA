@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/validacion.html');
+    res.sendFile(__dirname + '/seleccionModulo.html');
 })
 
 app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
