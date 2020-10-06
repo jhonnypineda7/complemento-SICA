@@ -26,16 +26,16 @@ app.get('/', (req, res) => {
 })
 
 app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
-       MongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-        var dbo = db.db("Archivosdb");
-        var myobj = { modulo: `${modulo}`, name: `${fileName}`, totalEncabezados: `${excels.celdasTotales}` };
-        dbo.collection("archivos").insertOne(myobj, function (err, res) {
-            if (err) throw err;
-            console.log("1 document inserted");
-            db.close();
-        });
-    }) 
+    //    MongoClient.connect(url, function (err, db) {
+    //     if (err) throw err;
+    //     var dbo = db.db("Archivosdb");
+    //     var myobj = { modulo: `${modulo}`, name: `${fileName}`, totalEncabezados: `${excels.celdasTotales}` };
+    //     dbo.collection("archivos").insertOne(myobj, function (err, res) {
+    //         if (err) throw err;
+    //         console.log("1 document inserted");
+    //         db.close();
+    //     });
+    // }) 
     fileName = req.file.originalname
     modulo = req.body.modulo
     excels.validar(modulo, fileName, `archivos/${fileName}`);
@@ -47,16 +47,16 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
 
     )
 
-    MongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-        var dbo = db.db("Archivosdb");
-        var myobj = { modulo: `${modulo}`, name: `${fileName}`, totalEncabezados: `${excels.celdasTotales}` };
-        dbo.collection("archivos").insertOne(myobj, function (err, res) {
-            if (err) throw err;
-            console.log("1 documento insertado");
-            db.close();
-        });
-    })
+    // MongoClient.connect(url, function (err, db) {
+    //     if (err) throw err;
+    //     var dbo = db.db("Archivosdb");
+    //     var myobj = { modulo: `${modulo}`, name: `${fileName}`, totalEncabezados: `${excels.celdasTotales}` };
+    //     dbo.collection("archivos").insertOne(myobj, function (err, res) {
+    //         if (err) throw err;
+    //         console.log("1 documento insertado");
+    //         db.close();
+    //     });
+    // })
     fs.unlink('./archivos/' + fileName, (err) => {
         if (err) {
             console.error(err)
