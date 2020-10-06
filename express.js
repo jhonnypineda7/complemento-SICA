@@ -6,10 +6,6 @@ const fs = require('fs')
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb+srv://jhonny95:369852147@1-1.xxloa.mongodb.net/Archivosdb?retryWrites=true&w=majority";
 
-app.listen(3000, () => {
-    console.log('http://localhost:3000...');
-});
-
 storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './archivos')
@@ -76,8 +72,6 @@ app.use(function (err, req, res, next) {
 
 
 
-
-
-var server = app.listen(process.env.PORT || 5000, function () {
-    var port = server.address().port;
+app.listen(3000, () => {
+    console.log('http://localhost:3000...');
 });
