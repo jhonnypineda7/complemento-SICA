@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/seleccioneModulo.html');
+    res.sendFile(__dirname + '/validacion.html');
 })
 
 app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
@@ -52,3 +52,5 @@ app.use(function (err, req, res, next) {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);
+
+
