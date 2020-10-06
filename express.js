@@ -26,9 +26,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
-    if (req.file.originalname === undefined) {
-        next(new Error('no coincide'));
-    }
        MongoClient.connect(url, function (err, db) {
         if (err) throw err;
         var dbo = db.db("Archivosdb");
@@ -44,14 +41,12 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
     excels.validar(modulo, fileName, `archivos/${fileName}`);
     res.send(`<h1 style="text-align:center;margin-top:300px;font-family: Arial, Helvetica, sans-serif;"> 
                 El archivo:${fileName}<br>${excels.mensajeEvaluacion} 
-                <a href="http://localhost:3000/"><br>
+                <a href="https://calm-basin-93401.herokuapp.com/"><br>
                 <button style="font-size:25px; border-radius: 10px;">INICIO</button></a>
               </h1>`
 
     )
-<<<<<<< HEAD
-    
-=======
+
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
         var dbo = db.db("Archivosdb");
@@ -62,7 +57,6 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
             db.close();
         });
     })
->>>>>>> 7f3f1fe925d4ec513c9d506f38f1ea32d3cf748d
     fs.unlink('./archivos/' + fileName, (err) => {
         if (err) {
             console.error(err)
@@ -79,7 +73,7 @@ app.use(function (err, req, res, next) {
             return
         }
     })
-    return res.status(500).send(`<h1 style="text-align:center;margin-top:300px;font-family: Arial, Helvetica, sans-serif;">El archivo no coincide con el modulo seleccionado<a href="http://localhost:3000/"><br><br>
+    return res.status(500).send(`<h1 style="text-align:center;margin-top:300px;font-family: Arial, Helvetica, sans-serif;">El archivo no coincide con el modulo seleccionado<a href="https://calm-basin-93401.herokuapp.com/"><br><br>
     <button style="font-size:25px; border-radius: 10px;">INICIO</button></a></h1>`);
 });
 
