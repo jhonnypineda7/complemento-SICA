@@ -49,7 +49,20 @@ app.post('/validacion_de_archivos', upload.single('archivo'), (req, res) => {
               </h1>`
 
     )
+<<<<<<< HEAD
     
+=======
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        var dbo = db.db("Archivosdb");
+        var myobj = { modulo: `${modulo}`, name: `${fileName}`, totalEncabezados: `${excels.celdasTotales}` };
+        dbo.collection("archivos").insertOne(myobj, function (err, res) {
+            if (err) throw err;
+            console.log("1 documento insertado");
+            db.close();
+        });
+    })
+>>>>>>> 7f3f1fe925d4ec513c9d506f38f1ea32d3cf748d
     fs.unlink('./archivos/' + fileName, (err) => {
         if (err) {
             console.error(err)
