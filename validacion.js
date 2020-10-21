@@ -1,10 +1,10 @@
 const excelToJson = require('convert-excel-to-json')
-const headers = require('./encabezados')
+import {headers} from './encabezados'
 // 
 exports.validar = (nombreModulo, nombreActividad, archivo) => {
 
     let validacionEncabezados;
-    let encabezadosTodos = [];
+    const encabezadosTodos = [];
     const encabezadosPredeterminados = headers.headers[nombreModulo][nombreActividad]
     const archivoActual = excelToJson({
         sourceFile: archivo
@@ -44,7 +44,6 @@ exports.validar = (nombreModulo, nombreActividad, archivo) => {
     };
 
     if (validacionEncabezados === true) {
-        console.log(archivo);
         exports.mensajeEvaluacion = `--Es valido--`
     } else {
         exports.mensajeEvaluacion = `No es valido: las celdas no coinciden`
